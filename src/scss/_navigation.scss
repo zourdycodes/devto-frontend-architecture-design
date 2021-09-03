@@ -16,6 +16,34 @@
     max-width: 2000px;
     width: 100%;
 
+    &__hamburgerMenu {
+      display: none;
+      background-color: var(--font-color);
+      height: 2px;
+      width: 1.2rem;
+      cursor: pointer;
+      margin-right: 1rem;
+
+      &::before,
+      &::after {
+        content: '';
+        background-color: var(--font-color);
+        height: 2px;
+        width: 1.2rem;
+        cursor: pointer;
+
+        display: block;
+      }
+
+      &::before {
+        transform: translateY(-7px);
+      }
+
+      &::after {
+        transform: translateY(5px);
+      }
+    }
+
     &__logo {
       color: black;
       display: flex;
@@ -51,6 +79,10 @@
       display: flex;
       align-items: center;
       margin-left: auto;
+
+      .hidden-search {
+        display: none;
+      }
 
       button {
         background-color: var(--main-theme);
