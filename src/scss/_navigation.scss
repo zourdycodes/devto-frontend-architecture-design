@@ -1,0 +1,107 @@
+.header {
+  max-width: 100%;
+  background-color: var(--header-bg);
+
+  display: flex;
+
+  height: var(--header-height);
+  padding: 1rem 4rem;
+
+  .headerContainer {
+    display: flex;
+    align-items: center;
+
+    //TODO
+    // max-width: var(--site-width);
+    max-width: 2000px;
+    width: 100%;
+
+    &__logo {
+      color: black;
+      display: flex;
+      align-items: center;
+    }
+
+    &__searchBox {
+      max-width: 420px;
+      flex: 1 auto;
+      margin: 0 1rem;
+
+      form {
+        input {
+          outline: 0;
+
+          background-color: var(--main-0);
+          padding: 0.6rem;
+          font-size: 1rem;
+          border-radius: 5px;
+          border: 1px solid var(--main-3);
+          width: 100%;
+
+          &:focus {
+            background-color: vaR(--header-bg);
+
+            box-shadow: 1px 1px var(--main-theme);
+          }
+        }
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+
+      button {
+        background-color: var(--main-theme);
+        color: var(--header-bg);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        margin-right: 0.5rem;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: vaR(--main-theme-darker);
+          transition: all ease-in-out 0.25s;
+        }
+      }
+
+      i {
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        color: var(--main-8);
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0 0 10px rgba($color: #000000, $alpha: 0.05);
+          background-color: rgba($color: #000000, $alpha: 0.05);
+          color: var(--font-color);
+          z-index: 1;
+          transition: all 0.15s ease-in-out;
+        }
+      }
+
+      span {
+        height: 2rem;
+        width: 2rem;
+        margin: 0 1rem;
+
+        img {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: 0 0 0 5px rgba($color: #000000, $alpha: 0.05);
+          }
+        }
+      }
+    }
+  }
+}
