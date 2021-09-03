@@ -104,4 +104,50 @@
       }
     }
   }
+
+  .dropdown-menu-close {
+    display: none;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: var(--header-height);
+    right: 4rem;
+    left: auto;
+
+    background: var(--header-bg);
+    border: 2px solid var(--font-color);
+    box-shadow: 4px 4px 0 var(--font-color);
+    border-radius: 4px;
+
+    min-width: 250px;
+    z-index: 4;
+
+    ul {
+      li {
+        padding: 0.5rem;
+        cursor: pointer;
+        line-height: 1.6;
+
+        small {
+          color: var(--main-5);
+        }
+
+        &:first-child {
+          border-bottom: 1px solid var(--main-2);
+          padding: 0.7rem;
+        }
+
+        &:last-child {
+          border-top: 1px solid var(--main-2);
+        }
+
+        &:hover {
+          background-color: var(--main-a);
+          color: var(--main-theme-darker);
+          transition: all 0.9ms ease-in;
+        }
+      }
+    }
+  }
 }

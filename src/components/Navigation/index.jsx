@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaDev } from 'react-icons/fa';
 import { BiMessageRoundedCheck } from 'react-icons/bi';
 import { RiNotificationLine } from 'react-icons/ri';
 
 export const Navigation = () => {
+  const [showMenu, setShowMenu] = useState(true);
+
+  const toggleMenu = () => {
+    setShowMenu((showMenu) => !showMenu);
+  };
+
   return (
     <header className="header">
       <div className="headerContainer">
@@ -27,10 +33,37 @@ export const Navigation = () => {
             <RiNotificationLine />
           </i>
 
-          <span>
+          <span onClick={toggleMenu}>
             <img src="https://picsum.photos/200" alt="profile logo" />
           </span>
         </div>
+      </div>
+
+      <div className={`${showMenu ? 'dropdown-menu' : 'dropdown-menu-close'}`}>
+        <ul>
+          <li onClick={toggleMenu}>
+            <a href="/profile">
+              <div className="u-n">ZourdyZou</div>
+              <small className="u-name-id">@zourdyrusty</small>
+            </a>
+          </li>
+
+          <li onClick={toggleMenu}>
+            <a href="/dashboard">Dashboard</a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a href="/post">Writing a Post</a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a href="/list">Reading List</a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a href="/settings">Settings</a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a href="/signout">Sign Out</a>
+          </li>
+        </ul>
       </div>
     </header>
   );

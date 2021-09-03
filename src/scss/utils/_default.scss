@@ -27,6 +27,28 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.5;
+
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
 .main-container {
   height: 100vh;
   width: 100%;
