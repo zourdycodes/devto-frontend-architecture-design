@@ -1,5 +1,6 @@
 // variables
 @import './scss/variables';
+@import './scss/utils/default';
 
 // components
 @import './scss/articlecomponent';
@@ -11,5 +12,4 @@
 @import './scss/rightsidebar';
 
 // utilities
-@import './scss/utils/default';
 @import './scss/utils/mediaQueries';
