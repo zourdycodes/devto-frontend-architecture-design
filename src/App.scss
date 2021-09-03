@@ -1,0 +1,15 @@
+// variables
+@import './scss/variables';
+
+// components
+@import './scss/articlecomponent';
+@import './scss/articleskeleton';
+@import './scss/cardcomponent';
+@import './scss/content';
+@import './scss/leftsidebar';
+@import './scss/navigation';
+@import './scss/rightsidebar';
+
+// utilities
+@import './scss/utils/default';
+@import './scss/utils/mediaQueries';
