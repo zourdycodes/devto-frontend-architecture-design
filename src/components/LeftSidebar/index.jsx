@@ -20,6 +20,8 @@ import { RiInstagramFill, RiTwitchLine } from 'react-icons/ri';
 import { CgShapeHexagon } from 'react-icons/cg';
 import { GrFormClose } from 'react-icons/gr';
 
+import { tags } from '../../tempData';
+
 export const LeftSidebar = () => {
   const [showMore, setShowMore] = useState(false);
 
@@ -86,7 +88,8 @@ export const LeftSidebar = () => {
               </a>
             </li>
 
-            <li className={`${showMore ? 'more-hidden' : 'more'}`}>
+            {/* MORE BUTTON */}
+            <li className={`${showMore ? 'more hidden' : 'more'}`}>
               <i></i>
 
               <a href="#" onClick={toggleShowMore}>
@@ -195,6 +198,25 @@ export const LeftSidebar = () => {
             </i>
           </a>
         </div>
+
+        <nav className="leftBar__tagList">
+          <header>
+            <h3>My Tags</h3>
+            <i>
+              <CgShapeHexagon />
+            </i>
+          </header>
+
+          <ul>
+            {tags.map((tag, index) => {
+              return (
+                <li key={index}>
+                  <a href="#">#{tag}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
       </aside>
     </>
   );

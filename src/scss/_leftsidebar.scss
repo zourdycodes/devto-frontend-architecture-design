@@ -1,0 +1,95 @@
+.leftBar {
+  .hidden {
+    display: none;
+  }
+
+  &__menu {
+    ul li a {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      color: var(--main-9);
+
+      i {
+        font-size: 1.25rem;
+        padding-right: 0.5rem;
+      }
+
+      &:hover {
+        background-color: var(--main-a);
+        color: var(--main-theme-darker);
+        border-radius: 5px;
+      }
+    }
+
+    .more {
+      font-size: 0.875rem;
+
+      a {
+        color: var(--main-7);
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    padding: 1rem;
+
+    a {
+      font-size: 1.5rem;
+      color: var(--main-6);
+      margin: 0 0.5rem;
+
+      &:hover {
+        color: var(--main-9);
+      }
+    }
+  }
+
+  &__tagList {
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem;
+      padding-right: 0;
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      i {
+        padding: 0.5rem;
+        margin-right: 1rem;
+        color: var(--main-6);
+        cursor: pointer;
+        font-size: 1.5rem;
+        border-radius: 5px;
+
+        &:hover {
+          color: var(--main-9);
+          background-color: var(--main-a);
+        }
+      }
+    }
+
+    ul {
+      height: 40vh;
+      overflow-y: auto;
+      margin-right: 0.75rem;
+      line-height: 1.6;
+
+      li {
+        padding: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--main-theme-darker);
+          background-color: var(--main-a);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
