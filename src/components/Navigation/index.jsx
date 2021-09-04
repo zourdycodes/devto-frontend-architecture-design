@@ -4,7 +4,7 @@ import { BiMessageRoundedCheck } from 'react-icons/bi';
 import { RiNotificationLine } from 'react-icons/ri';
 import { FiSearch } from 'react-icons/fi';
 
-export const Navigation = () => {
+export const Navigation = ({ openMenu }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -14,7 +14,10 @@ export const Navigation = () => {
   return (
     <header className="header">
       <div className="headerContainer">
-        <div className="headerContainer__hamburgerMenu"></div>
+        <div
+          className="headerContainer__hamburgerMenu"
+          onClick={openMenu}
+        ></div>
         <a href="https://dev.to" className="headerContainer__logo">
           <FaDev size="3.125rem" />
         </a>
