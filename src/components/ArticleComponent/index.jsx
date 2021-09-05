@@ -2,8 +2,8 @@ import React from 'react';
 
 import { BiHeart } from 'react-icons/bi';
 import { FaRegComment } from 'react-icons/fa';
-import dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
+// import dayjs from 'dayjs';
+// import relativeTime from 'dayjs/plugin/relativeTime';
 
 export const ArticleComponent = ({
   title,
@@ -16,6 +16,11 @@ export const ArticleComponent = ({
   user,
   published_at,
 }) => {
+  const manipulateDate = new Date(published_at).toLocaleDateString(undefined, {
+    day: 'numeric',
+    month: 'long',
+  });
+
   return (
     <article className="article">
       {cover_image && (
@@ -40,7 +45,7 @@ export const ArticleComponent = ({
             <span className="u-name">{user.username}</span>
           </a>
           <a href={url}>
-            <span className="time">March 01, (One Day Ago)</span>
+            <span className="time">{manipulateDate}</span>
           </a>
 
           <a href={url}>

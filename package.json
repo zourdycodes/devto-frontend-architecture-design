@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
-    "dayjs": "^1.10.4",
+    "dayjs": "^1.10.6",
     "husky": ">=6",
     "lint-staged": ">=10",
     "node-sass": "^4.14.1",
